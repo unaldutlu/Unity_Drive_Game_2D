@@ -23,11 +23,11 @@ public class mainCar : MonoBehaviour
         {
             Vector3 right_limit = new Vector3(1.85f, transform.position.y,0);
             transform.position = right_limit;
-        }
+        }// SAĞ SATIR KONTROLÜ
         if (transform.position.x < -1.82f)
         {
             Vector3 left_limit = new Vector3(-1.82f, transform.position.y,0);
             transform.position = left_limit;
-        }
+        } // SOL SATIR KONTROLÜ
     }
 }
