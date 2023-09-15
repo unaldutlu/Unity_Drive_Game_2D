@@ -48,6 +48,9 @@ TagManager:
   - name: Way
     uniqueID: 916574697
     locked: 0
+  - name: CarButNpc
+    uniqueID: 1772834067
+    locked: 0
   - name: Car
     uniqueID: 1844062055
     locked: 0
