@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarButNpc : MonoBehaviour
 {
@@ -93,12 +94,20 @@ public class CarButNpc : MonoBehaviour
             case 18:
                 spr.sprite = car18;
                 break;
-        }
+        }//ARACIN SPRITE KONTROLÜ
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         rb.velocity = new Vector3(rb.velocity.x, varsayılan_hız * 50 * Time.deltaTime, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag =="mainCar")
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
