@@ -19,7 +19,7 @@ public class CarSpawner : MonoBehaviour
         while (can_spawn==true)
         {
             Instantiate(random_car_npc, transform.position,Quaternion.identity);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
     }
 }
